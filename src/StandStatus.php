@@ -309,6 +309,7 @@ class StandStatus
     {
         $filteredAircraft = [];
         foreach ($pilots as $pilot) {
+            $pilot = (array)$pilot;
             $aircraft = new Aircraft($pilot);
 
             $insideAirfieldRange = DecimalCoordinateHelper::distanceBetweenCoordinates($aircraft->latitude, $aircraft->longitude, $this->airportLatitude, $this->airportLongitude)
