@@ -19,7 +19,7 @@
   ],
   "require": {
     "php": ">=8.0",
-    "skymeyer/vatsimphp": "^2.0",
+    "paulhollmann/vatsimphp": "^2.0",
     "guzzlehttp/guzzle": "^6.5|^7.0"
   },
   "require-dev": {
