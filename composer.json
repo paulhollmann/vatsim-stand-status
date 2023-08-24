@@ -1,5 +1,5 @@
 {
-  "name": "cobaltgrid/vatsim-stand-status",
+  "name": "paulhollmann/vatsim-stand-status",
   "description": "A PHP library to access the status of aircraft stands on VATSIM",
   "keywords": [
     "vatsim",
