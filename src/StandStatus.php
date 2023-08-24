@@ -13,7 +13,7 @@ use CobaltGrid\VatsimStandStatus\Libraries\CAACoordinateConverter;
 use CobaltGrid\VatsimStandStatus\Libraries\DecimalCoordinateHelper;
 use CobaltGrid\VatsimStandStatus\Libraries\OSMStandData;
 use Throwable;
-use Vatsimphp\VatsimData;
+use VatsimDatafeed\Datafeed;
 
 class StandStatus
 {
@@ -194,8 +194,8 @@ class StandStatus
         $this->unoccupiedStandsCache = null;
 
         // Fetch pilot data
-        $vatsimData = new VatsimData();
-        $pilots = $this->getVATSIMPilots($vatsimData);
+        //$vatsimData = new VatsimData();
+        //$pilots = $this->getVATSIMPilots($vatsimData);
 
         // Clear existing matches
         foreach ($this->stands as &$stand) {
@@ -292,17 +292,12 @@ class StandStatus
     /**
      * Returns an array of pilots from the VATSIM data feed
      *
-     * @param VatsimData $vatsimData
      * @return array
      */
-    public function getVATSIMPilots(VatsimData $vatsimData)
+    public function getVATSIMPilots()
     {
-        if (!$vatsimData->loadData()) {
-            // VATSIM data file is down.
-            return null;
-        }
 
-        return $vatsimData->getPilots()->toArray();
+        return Datafeed::pilots();
     }
 
     /**
