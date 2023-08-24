@@ -194,8 +194,7 @@ class StandStatus
         $this->unoccupiedStandsCache = null;
 
         // Fetch pilot data
-        //$vatsimData = new VatsimData();
-        //$pilots = $this->getVATSIMPilots($vatsimData);
+        $pilots = $this->getVATSIMPilots();
 
         // Clear existing matches
         foreach ($this->stands as &$stand) {
