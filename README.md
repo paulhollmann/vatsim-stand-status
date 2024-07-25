@@ -2,6 +2,10 @@
 
 ![Stand Status Header Image](.github/docs/images/readme-header.png)
 
+
+# Modified for use with Laravel 11
+
+
 ## Table of Contents
 
 * [About](#about)
@@ -305,4 +309,3 @@ For an integrated usage example, see the Gatwick demo in `examples/egkkStands.ph
     // EZY48VY is on stand 554
 ```
 > If you want an associative array, where the index is the stand name, use `->occupiedStands(true)`
-

@@ -13,7 +13,7 @@ use CobaltGrid\VatsimStandStatus\Libraries\CAACoordinateConverter;
 use CobaltGrid\VatsimStandStatus\Libraries\DecimalCoordinateHelper;
 use CobaltGrid\VatsimStandStatus\Libraries\OSMStandData;
 use Throwable;
-use VatsimDatafeed\Datafeed;
+use VatsimData\Datafeed;
 
 class StandStatus
 {
